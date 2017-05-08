@@ -15,7 +15,7 @@ int main()
 
     eSerie series[S];
     eCliente clientes[C];
-    eseriecliente sercli[SC]={  {1,100}, {1,101}, {1,102}, {1,103}, {1, 104},{2,100}, {2,101}, {2,102}, {2,103}, {2, 104}, {3,100}, {3,101}, {3,102}, {3,103},{4,100}, {4,101}, {5,102}, {6,103}, {7, 104},{7,100}, {8,101}, {8,102}, {9,103}, {10, 104}  };
+    eseriecliente sercli[SC]; //={  {1,100}, {1,101}, {1,102}, {1,103}, {1, 104},{2,100}, {2,101}, {2,102}, {2,103}, {2, 104}, {3,100}, {3,101}, {3,102}, {3,103},{4,100}, {4,101}, {5,102}, {6,103}, {7, 104},{7,100}, {8,101}, {8,102}, {9,103}, {10, 104}  };
     int idcliente=0;
     int espaciolibre = 0;
     int idserie = 99;
@@ -76,7 +76,7 @@ int main()
 
         printf("\n  Ingrese una de las opciones: ");
 
-        option = vM(1, 16);
+        option = vM(1, 17);
         printf("\n\n");
 
         switch(option)
@@ -218,6 +218,13 @@ int main()
 
                 break;
 
+                  case 17:
+               mostraridseriecliente(clientes, series, C, S);
+               altaseriacliente(sercli,SC);
+                system("pause");
+                system("cls");
+
+                break;
 
 
         }

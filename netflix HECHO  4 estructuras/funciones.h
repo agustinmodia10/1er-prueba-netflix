@@ -65,6 +65,8 @@ void bajaxid(eCliente [], eseriecliente [], eSerie [], int , int , int );
 void modificarcliente(eCliente [], eseriecliente [], eSerie [], int , int , int );
 void modificarserie(eSerie [], int);
 void bajaxidseries(eSerie [], int);
+void altaseriacliente(eseriecliente [], int);
+void mostraridseriecliente(eCliente [], eSerie  [],  int, int);
 
 
 void inicio(eCliente [], eseriecliente [], eSerie [], int , int, int );

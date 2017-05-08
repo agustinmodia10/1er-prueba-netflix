@@ -446,11 +446,11 @@ void inicio(eCliente cliente[], eseriecliente sercli[], eSerie serie [], int num
         cliente[e].estado = 0;
         cliente[e].idCliente = 0;
     }
-      /*for(l = 0; l < numsc; l++)
+      for(l = 0; l < numsc; l++)
     {
         sercli[l].idcliente = 0;
         sercli[l].idserie = 0;
-    }*/
+    }
 
      for(i = 0; i < nums; i++)
     {
@@ -1191,3 +1191,73 @@ void bajaxidseries(eSerie serie [],int nums)
 
 
 }
+
+void mostraridseriecliente(eCliente cliente [], eSerie serie [], int num, int nums)
+{
+    int e,i;
+    printf("--CLIENTES-- \n -------------------------------------------\n   --id-- \t     --nombre--  \n");
+    printf(" -------------------------------------------\n");
+    for(e=0; e < num; e++)
+    {
+        printf("%10d \t %10s \n", cliente[e].idCliente, cliente[e].nombre);
+    }
+    printf("--SERIES-- \n -------------------------------------------\n     --id-- \t     --titulo--  \n");
+    printf(" -------------------------------------------\n");
+    for(e=0; e < nums; e++)
+    {
+        printf("%10d \t %10s \n", serie[e].idSerie, serie[e].titulo);
+    }
+}
+void altaseriacliente(eseriecliente seriecliente[], int numsc)
+{
+    int e,l, elibre, encontro = 0;
+    int auxa= 0;
+    char auxname[100];
+    int auxid=0;
+
+    elibre = obtenerespaciolibreseriesclientes(seriecliente, numsc);
+
+
+
+
+          if(elibre != -1)
+    {
+        printf("  INGRESE DATOS: \n");
+
+
+        printf("\n  ingrese id entre 1 y 10: ");
+        auxa = vM(1, 10);
+        printf("\n  ingrese id entre 100 y 104: ");
+        auxid = vM( 100, 104);
+
+        for(e = 0; e < numsc; e++)
+        {
+            if(auxa == seriecliente[e].idcliente && auxid ==  seriecliente[e].idserie )
+            {
+                encontro = 1;
+                break;
+            }
+        }
+
+        if(!encontro)
+		{
+            seriecliente[elibre].idcliente = auxa;
+            seriecliente[elibre].idserie = auxid;
+
+		}
+
+		else
+		{
+			printf("\n  el id ingresado ya existe, ingrese otro.  \n\n");
+			system("pause");
+			system("cls");
+		}
+
+    }
+
+
+
+
+
+	}
+

@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1493114079 source:c:\users\elmolelaptop\desktop\utn clases nocturno\clase 9\netflix\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1493238665 source:c:\users\elmolelaptop\desktop\utn clases nocturno\clase 9\netflix - copy\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1493359220 source:c:\users\elmolelaptop\desktop\utn clases nocturno\netflix - copy\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1493370361 source:c:\users\elmolelaptop\desktop\utn clases nocturno\clase 9\netflix copia\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1493420702 source:c:\users\elmolelaptop\desktop\utn clases nocturno\clase 9\netflix hecho - copy (2)\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1494231749 source:c:\users\elmolelaptop\desktop\utn clases nocturno\clase 9\netflix hecho  4 estructuras\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1494232112 source:c:\users\elmolelaptop\desktop\utn clases nocturno\clase 9\netflix hecho  4 estructuras\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1494231727 c:\users\elmolelaptop\desktop\utn clases nocturno\clase 9\netflix hecho  4 estructuras\funciones.h
+	<stdio.h>
+	<conio.h>
+	<ctype.h>
+	<windows.h>
+	<string.h>
+	<stdlib.h>
+

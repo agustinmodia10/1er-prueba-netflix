@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1494291427 source:d:\modiaagustin\modiaagustin\lib.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+
+1494290705 d:\modiaagustin\modiaagustin\lib.h
+	<stdio.h>
+	<conio.h>
+	<ctype.h>
+	<windows.h>
+	<string.h>
+	<stdlib.h>
+
+1494291541 source:d:\modiaagustin\modiaagustin\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+
+1494291632 source:c:\users\elmolelaptop\desktop\modiaagustin\lib.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+
+1494290706 c:\users\elmolelaptop\desktop\modiaagustin\lib.h
+	<stdio.h>
+	<conio.h>
+	<ctype.h>
+	<windows.h>
+	<string.h>
+	<stdlib.h>
+
+1494291542 source:c:\users\elmolelaptop\desktop\modiaagustin\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+
+1494998608 source:c:\users\elmolelaptop\desktop\modiaagustin - copy - copy\lib.c
+	<stdio.h>
+	<stdlib.h>
+
+1495091596 source:c:\users\elmolelaptop\desktop\modiaagustin - copy - copy\main.c
+	<stdio.h>
+	<stdlib.h>
+

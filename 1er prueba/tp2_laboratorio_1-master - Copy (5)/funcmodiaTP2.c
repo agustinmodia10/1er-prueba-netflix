@@ -584,56 +584,6 @@ void modificarprogramador (eprog pro [], int nums)
 
 
 
-
-void mostrarprog (eprog pro[], int num)
-{
-    int e,l;
-	eprog prog;
-
-	for(e = 0; e < num - 1; e++)
-    {
-        for(l = e + 1; l < num; l++)
-        {
-            if(pro[l].idpro < pro[e].idpro)
-			{
-				prog = pro[e];
-				pro[e] = pro[l];
-				pro[l] = prog;
-			}
-        }
-    }
-
-    for(e = 0; e < num; e++)
-	{
-
-        if(pro[e].estado != 0)
-        {
-             printf(" ------------------------------------------------------------------ \n");
-          printf(" --> NOMBRE : %s\n", pro[e].nombre );
-          printf(" --> APELLIDO : %s\n", pro[e].apellido );
-          printf(" --> ID : %d\n", pro[e].idpro );
-          printf(" --> ID CATEGORIA : %d", pro[e].idcate );
-
-            if(pro[e].idcate == 10010)
-            {
-                printf( " --> junior\n");
-            }
-            if(pro[e].idcate == 10011)
-            {
-                printf(" --> semisenior\n");
-            }
-             if(pro[e].idcate == 10012)
-            {
-                printf(" --> senior\n");
-            }
-        }
-
-    }
-
-
-}
-
-
 void cargarproyectos(eproye proyecto[])
 {
     int id[10] = {100,102,103,104,105,106,107,108,109,110};
@@ -686,32 +636,10 @@ void mostrarproye (eproye proyec[], int num)
 
 }
 
-
-void mostrarpropro (eproproy propro[], int num)
-{
-    int e,l;
-
-    for(e = 0; e < num; e++)
-	{
-
-        if(propro[e].idpro != 0)
-        {
-             printf(" ------------------------------------------------------------------ \n");
-          printf(" --> ID progrmsdor : %d\n", propro[e].idpro);
-          printf(" --> ID proyecto : %d\n", propro[e].idproye);
-          printf(" --> HORAS : %d\n", propro[e].pago);
-
-        }
-
-    }
-
-
-}
-
 void mostrarprogaproyecto (eprog prog[], eproye proye [], eproproy propro[], int num, int nume, int numpxp )
 {
     int e,y,i,l;
-    int acumulador = 0;
+    float acumulador = 0;
     eprog auxprog;
 
 
@@ -776,17 +704,17 @@ void mostrarprogaproyecto (eprog prog[], eproye proye [], eproproy propro[], int
              if(prog[e].idcate == 10010)
             {
                 acumulador= propro[i].pago * 100;
-            printf( "       # PAGO ASIGNADO: $ %d \n", acumulador);
+            printf( "       # PAGO ASIGNADO: $ %0.2f \n", acumulador);
             }
             if(prog[e].idcate == 10011)
             {
                 acumulador= propro[i].pago * 150;
-            printf( "       # PAGO ASIGNADO: $ %d \n", acumulador);
+            printf( "       # PAGO ASIGNADO: $ %0.2f \n", acumulador);
             }
              if(prog[e].idcate == 10012)
             {
                 acumulador= propro[i].pago * 200;
-             printf( "       # PAGO ASIGNADO: $ %d \n", acumulador);
+             printf( "       # PAGO ASIGNADO: $ %0.2f \n", acumulador);
             }
 
         }
@@ -1162,15 +1090,19 @@ void cargarprogramadoaproyecto (eprog prog[], eproye proye [], eproproy propro[]
 
 		}
 
-		else
+
+
+		 if(encontro != 1)
 		{
-			printf("\n el id ingresado no existe o no esta cargado. intentelo de vuelta  \n\n");
+		    printf("\n el id ingresado no existe o no esta cargado. intentelo de vuelta  \n\n");
+			 propro[elibre].idpro = 0;
 			system("pause");
 			system("cls");
 
+           	return 0;
+
+
 		}
-
-
 
 		mostrarproye(proye,nume);
        printf("ingrese id del proyecto a buscar");
@@ -1208,8 +1140,8 @@ void cargarprogramadoaproyecto (eprog prog[], eproye proye [], eproproy propro[]
          if( flag == 0 )
             {
             propro[elibre].idproye = auxid;
-            printf("ingrese cantidad de horas a trabajar");
-            scanf("%d", & auxid);
+            printf("ingrese cantidad de horas a trabajar entre 1 y 10000000");
+            auxid=vM(1,10000000);
             propro[elibre].pago = auxid;
             propro[elibre].estado = 1;
             		printf(" id programador: %d \n id proyecto: %d \n cantidad de horas: %d \n", propro[elibre].idpro, propro[elibre].idproye, propro[elibre].pago);

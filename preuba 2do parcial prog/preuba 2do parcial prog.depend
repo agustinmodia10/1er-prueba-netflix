@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1510356998 source:c:\users\alumno\desktop\preuba 2do parcial prog\main.c
+1510361663 source:c:\users\alumno\desktop\preuba 2do parcial prog\main.c
 	<stdio.h>
 	<stdlib.h>
+	<time.h>
 
